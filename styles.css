@@ -1,0 +1,273 @@
+/*
+ https://www.freepik.com/free-vector/burgers-sale-banner-template_12980467.htm#page=4&query=hamburger&position=27&from_view=search&track=sph&uuid=59385662-50bc-4e8a-b737-f5e7ad6277ec 
+
+https://www.freepik.com/free-vector/restaurant-brochure-vector-menu-design-vector-cafe-template-with-handdrawn-graphic-food-flyer_26935529.htm#page=5&query=hamburger&position=31&from_view=search&track=sph&uuid=59385662-50bc-4e8a-b737-f5e7ad6277ec
+*/
+
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700;900&display=swap');
+
+/* RESET CCS */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+* {
+  margin: 0;
+  padding: 0;
+  font: inherit;
+}
+
+html {
+  color-scheme: dark light;
+  hanging-punctuation: first last;
+}
+img,
+picture,
+svg,
+video {
+  display: block;
+  max-width: 100%;
+}
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  text-wrap: balance;
+}
+p,
+li {
+  max-width: var(--p-max-width, 65ch);
+  text-wrap: pretty;
+}
+
+/* GLOBAL */
+
+:root {
+    --bg-color: #26211e;
+    --bg-header: #fecc40;   
+}
+
+body {
+    min-height: 100vh;
+    min-height: 100svh;
+    background-color: var(--bg-color);
+    background-image: url(../images/bg\ 1.jpg);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    font-family: "Roboto", sans-serif;
+}
+
+h1 {
+  font-size: 1.5rem;
+  font-weight: 700;
+  color: #fecc40;
+  letter-spacing: 2px;
+}
+
+button {
+  outline: none;
+  border: 3px solid var(--bg-header);
+  background-color: var(--bg-header);
+  color:var(--bg-color);
+  font-size: 1rem;
+  font-weight: 600;
+  letter-spacing: 1px;
+  padding: .5rem 1rem;
+  border-radius: 2px;
+  cursor: pointer;
+  transition-duration: 150ms;
+}
+
+button:hover {
+  background-color: transparent;
+  color: #fff;
+}
+
+ul {
+  list-style: none;
+}
+
+ul li {
+  margin-bottom: .45rem;
+}
+
+/* HEADER */ 
+
+header {
+    width: 100%;
+    background-color: var(--bg-header);
+    padding: 0rem 1.5rem;
+}
+
+nav {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+nav button {
+    background: transparent;
+    padding: 1rem;
+    border: none;
+    color: var(--bg-color);
+    font-weight: 700;
+    cursor: pointer;
+    transition-duration: 125ms;
+}
+
+nav button:hover {
+    background-color: #f7c12b;
+}
+
+#content {
+    width: 80%;
+    margin: 2rem auto;
+    background-color: #26211e;
+    border-radius: 15px;
+    color: #fff;
+}
+
+.dropdown {
+  padding: 2rem 4rem;
+}
+
+/* CONTENT */
+
+.home,
+.menu,
+.about {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 1.5rem;
+}
+
+.home > h1,
+.menu > h1,
+.about > h1 {
+  border: 3px solid var(--bg-header);
+  width: fit-content;
+  padding: .75rem 1rem;
+
+}
+
+.home > h1 > span,
+.about > h1 > span {
+  color: #fff;
+  margin-left: .5rem;
+}
+
+.home-promotion {
+  position: relative;
+  display: flex;
+  justify-content: center;
+}
+
+.home-promotion > figure img{
+  object-fit: contain;
+  width: 750px;
+  height: 550px;
+}
+
+.home-promotion > figure{
+  width: 750px;
+  height: 550px;
+}
+
+.home-promotion > button, 
+.menu > button{
+  color: #fff;
+  background-color: transparent;
+  position: absolute;
+  bottom: 100px;
+  border-color: #fff;
+  font-size: 1.1rem;
+  letter-spacing: 2px;
+}
+
+.home-promotion > button:hover,
+.menu > button:hover {
+  border-color: var(--bg-header);
+  background-color: var(--bg-header);
+  color: #000;
+}
+
+.home-schedule {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  gap: 1rem;
+  /* flex-wrap: wrap; */
+}
+
+.schedule-reservation,
+.schedule-text {
+  flex-basis: 50%;
+  display: flex;
+}
+
+.schedule-reservation {
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.schedule-text {
+  justify-content: flex-end;
+  align-items: center;
+}
+
+.home-location {
+  margin-top: 2rem;
+}
+
+
+.menu > div {
+  margin-bottom: 3rem;
+}
+
+.menu > h1,
+.about > h1,
+.menu > button {
+  margin-bottom: 2rem;
+}
+
+.menu-pack,
+.about-info  {
+  display: grid;
+  grid-template-columns: minmax(200px, 1fr) minmax(200px, 1fr);
+  grid-template-rows: 1fr;
+  column-gap: 1rem;
+  align-items: center;
+  justify-items: center;
+}
+
+
+.menu-pack > .pack-text {
+  display: flex;
+  gap: 2rem;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.menu > button {
+  position: relative;
+  bottom: 0;
+}
+
+.about-info {
+  grid-template-columns: minmax(250px, 1fr) 1fr;
+}
+
+.info-item{
+  display: flex;
+  gap: 2rem;
+  margin-bottom: 1.5rem;
+}
+
+
+
